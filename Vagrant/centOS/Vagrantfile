@@ -1,0 +1,46 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+#Default Script
+#$Default=/scripts/DefaultScript.sh
+#Scrip for docker installation
+#$DockerScript=/scripts/DockerScript.sh
+
+#Define the configuration version as 2
+#All configuratins should start with centosConfig
+Vagrant.configure("2") do |centOSconfig|
+
+#Vagrant Box is centOS 7
+  centOSconfig.vm.box = "centos/7"
+#Box hostname is centOS7
+  centOSconfig.vm.hostname = "cetOS7"
+  centOSconfig.vm. name = "cetOS7"
+  centOSconfig.vm.box_url= "https://app.vagrantup.com/centos/boxes/7"
+  #centOSconfig.vm.guest :windows
+  centOSconfig.vm.post_up_message "Vagrantb UP"
+  # use root user
+  centOSconfig.vm.privileged = true
+  centOSconfig.vm.provision "shell", inline: "hello"
+  #Provider
+  centOSconfig.vm.provider :virtualbox do |p|
+	p.name = "centOS7"
+  'end'
+  
+# Network Interface
+ centOSconfig.vm.network = "NAT"
+ centOSconfig.vm.network = "Red interna"
+# Sync Folders
+ centOSconfig.vm.synced_folder "DropBox" "D:/Dropbox" 'end'
+ centOSconfig.vm.synced_folder "Shared Folder" "C:/VirtualBox/Shared foler" 'end'
+# Shell Scrip for Default
+   centOSconfig.vm.provision "file", path: "../scripts/default.bat"
+   end
+ # Shell Scrip for Docker
+   #centOSconfig.vm.provision "shell" binary: true privileged: true path: $DockerScript 'end'
+ #  system("
+  #  if [ #{ARGV[0]} = 'up' ]; then
+   #     echo 'You are doing vagrant up and can execute your script'
+    #    ./scrips/default.sh
+	#	./scrips/docker.sh
+    #fi
+#")
+end

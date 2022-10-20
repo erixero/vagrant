@@ -1,0 +1,17 @@
+# Virtual Machines
+/VirtualBox VMs
+# Virtual Machine Snapshot
+/Snapasots
+# Virtual Machine Shared Folder
+/Shared Folder
+# Virtual Machine OVA
+/OVA
+# Virtual Machine Operating System ISO
+/ISO
+# Virtual Machine Backup folder
+/backup
+
+# Mook Environment
+\Vagrant\java
+\Vagrant\centOS
+\Vagrant\windows7
