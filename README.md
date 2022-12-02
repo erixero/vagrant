@@ -22,7 +22,7 @@ For a thorough introduction to virtualization and VirtualBox, please refer to th
 
 ### VAGRANT File
 
-The primary function of the *Vagrantfile is to describe the type of machine required for a project, and how to configure and provision these machines.
+The primary function of the **Vagrantfile** is to describe the type of machine required for a project, and how to configure and provision these machines.
 In order to get full privileges of Vagrant we need to understand what is a [Vagrant File](https://www.vagrantup.com/docs/vagrantfile)
 
 ### Using SSH to access the VM
