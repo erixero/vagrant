@@ -1,0 +1,31 @@
+services:
+  mongodb:
+    FROM: "mongo:5.0"
+    ENV:
+      - MONGO_INITDB_ROOT_USERNAME=MongoDBUser
+      - MONGO_INITDB_ROOT_PASSWORD=6183768lp
+    EXPOSE:
+        - 27017/tcp
+    LABEL: db=mongo
+    VOLUMES:
+        - MONGODB:"/var/lib/mongo/"
+    RUN: echo 'MongoDB is UP'
+    MAINTAINER: "Erick Quinteros"
+
+  mariadb:
+    FROM: "mariadb"
+    ENV:
+      MYSQL_ROOT_PASSWORD: 6183768lproot
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: MariaDBUser
+      MYSQL_PASSWORD: 6183768lp
+    EXPOSE:
+        - 3306/tcp
+    LABEL: db=sql
+    VOLUMES:
+        - MARIADB:"/var/lib/maria/"
+    RUN: echo 'MariaDB is UP'
+    MAINTAINER: "Erick Quinteros"
+VOLUMES:
+    MONGODB: "/data/db/MongoDB"
+    MARIADB: "/data/db/MariaDB"
