@@ -4,13 +4,12 @@
 
 # General
 .vagrant/
-*/.vagrant/
+Vagrant/centOS/.vagrant/
 
 # Log files (if you are creating logs in debug mode, uncomment this)
 # *.log
 
 #################### Custom.gitignore ####################
-
 # add your custom gitignore here:
 !.gitignore
 !.gitsubmodules
